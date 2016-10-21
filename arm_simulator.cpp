@@ -1,9 +1,11 @@
+#include <cmath>
 #include <iostream>
 #include <GL/glut.h>
 
 using namespace std;
 
-int deg;
+int l1=4, l2=3, l3=5;
+double dega1=0, dage2=30, dage3=-30;
 
 GLdouble CoordinateVertex[][3] = {
     {0.0, 0.0, 0.0},
@@ -19,13 +21,16 @@ int CoordinateEdge[][2] = {
 };
 
 GLdouble ArmVertex[][3] = {
-    
+    {0.0, 0.0, 0.0},
+    {0.0, l1, 0.0},
+    {0.0, l1 + l2*sin(dage2), l2*cos(dage2)},
+    {0.0, l1 + l2*sin(dage2) + l3*sin(dage2+dage3), l2*cos(dage2) + l3*cos(dage2+dage3)}
 };
 
 int ArmEdge[][2] = {
     {0.0, 1.0},
     {1.0, 2.0},
-    {2.0, 3.0}
+    {2.0, 3.0},
 };
 
 void display(void)
@@ -47,16 +52,12 @@ void display(void)
     glVertex3dv(CoordinateVertex[CoordinateEdge[2][0]]);
     glVertex3dv(CoordinateVertex[CoordinateEdge[2][1]]);
 
-    for(int i=0; i<3; ++i){
-        cout << ArmEdge[i][0] << "," << ArmEdge[i][1] << endl;
-    }
-/*
     glColor3d(1.0, 1.0, 1.0);
     for(int i=0; i<3; ++i){
         glVertex3dv(ArmVertex[ArmEdge[i][0]]);
         glVertex3dv(ArmVertex[ArmEdge[i][1]]);
     }
-*/
+
     glEnd();
 
     glFlush();
@@ -69,7 +70,7 @@ void resize(int w, int h)
     glLoadIdentity();
     gluPerspective(30.0, (double)w / (double)h, 1.0, 100.0);
     glTranslated(0.0, 0.0, -5.0);
-    gluLookAt(5.0, 5.0, 5.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
+    gluLookAt(-16.0, 3.0, 2.5, 0.0, 2.5, 2.5, 0.0, 1.0, 0.0);
 }
 
 void init(void)
@@ -97,9 +98,6 @@ int main(int argc, char *argv[])
     glutReshapeFunc(resize);
     init();
     glutKeyboardFunc(keyboard);
-    for(int i=0; i<3; ++i){
-        cout << ArmEdge[i][0] << ", " << ArmEdge[i][1] << endl;
-    }
     glutMainLoop();
     return 0;
 }
