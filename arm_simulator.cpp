@@ -1,11 +1,23 @@
-#include <cmath>
 #include <iostream>
+#include <math.h>
 #include <GL/glut.h>
 
 using namespace std;
 
-int l1=4, l2=3, l3=5;
-int dage1=0, dage2=30, dage3=-30;
+static const double pi=3.14;
+
+int l1=4, l2=3, l3=4;
+double deg1 = 0 * pi/180.0,
+       deg2 = 30 * pi/180.0,
+       deg3 = -30 * pi/180.0;
+
+double l2x = l2*cos(deg1)*cos(deg2),
+       l2y = l2*cos(deg2)*sin(deg1),
+       l2z = l1 + l2*sin(deg2);
+
+double l3x = (l3 + 1)*(cos(deg1)*cos(deg2)*cos(deg3) - cos(deg1)*sin(deg2)*sin(deg3)) + l2*cos(deg1)*cos(deg2),
+       l3y = (cos(deg2)*cos(deg3)*sin(deg1) - sin(deg1)*sin(deg2)*sin(deg3))*(l3 + 1) + l2*cos(deg2)*sin(deg1),
+       l3z = l1 + (cos(deg2)*sin(deg3) + cos(deg3)*sin(deg2))*(l3 + 1) + l2*sin(deg2);
 
 GLdouble CoordinateVertex[][3] = {
     {0.0, 0.0, 0.0},
@@ -22,9 +34,9 @@ int CoordinateEdge[][2] = {
 
 GLdouble ArmVertex[][3] = {
     {0.0, 0.0, 0.0},
-    {0.0, l1, 0.0},
-    {l2*cos(dage2)*sin(dage1), l1 + l2*sin(dage2), l2*cos(dage1)*cos(dage2)},
-    {(cos(dage2)*cos(dage3)*sin(dage1) - sin(dage1)*sin(dage2)*sin(dage3))*(l3 + 1) + l2*cos(dage2)*sin(dage1), l1 + (cos(dage2)*sin(dage3) + cos(dage3)*sin(dage2))*(l3 + 1) + l2*sin(dage2), (l3 + 1)*(cos(dage1)*cos(dage2)*cos(dage3) - cos(dage1)*sin(dage2)*sin(dage3)) + l2*cos(dage1)*cos(dage2)}
+    {0.0,  l1, 0.0},
+    {l2y, l2z, l2x},
+    {l3y, l3z, l3x}
 };
 
 int ArmEdge[][2] = {
@@ -52,8 +64,6 @@ void display(void)
     glVertex3dv(CoordinateVertex[CoordinateEdge[2][0]]);
     glVertex3dv(CoordinateVertex[CoordinateEdge[2][1]]);
 
-    cout << sin(30) << endl;
-
     glColor3d(1.0, 1.0, 1.0);
     for(int i=0; i<3; ++i){
         glVertex3dv(ArmVertex[ArmEdge[i][0]]);
@@ -72,7 +82,7 @@ void resize(int w, int h)
     glLoadIdentity();
     gluPerspective(30.0, (double)w / (double)h, 1.0, 100.0);
     glTranslated(0.0, 0.0, -5.0);
-    gluLookAt(-16.0, 3.0, 2.5, 0.0, 2.5, 2.5, 0.0, 1.0, 0.0);
+    gluLookAt(-14.0, 5.0, 4.0, 0.0, 3.0, 4.0, 0.0, 1.0, 0.0);
 }
 
 void init(void)
