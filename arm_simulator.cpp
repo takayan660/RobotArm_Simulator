@@ -5,7 +5,7 @@
 using namespace std;
 
 int l1=4, l2=3, l3=5;
-double dega1=0, dage2=30, dage3=-30;
+int dage1=0, dage2=30, dage3=-30;
 
 GLdouble CoordinateVertex[][3] = {
     {0.0, 0.0, 0.0},
@@ -23,8 +23,8 @@ int CoordinateEdge[][2] = {
 GLdouble ArmVertex[][3] = {
     {0.0, 0.0, 0.0},
     {0.0, l1, 0.0},
-    {0.0, l1 + l2*sin(dage2), l2*cos(dage2)},
-    {0.0, l1 + l2*sin(dage2) + l3*sin(dage2+dage3), l2*cos(dage2) + l3*cos(dage2+dage3)}
+    {l2*cos(dage2)*sin(dage1), l1 + l2*sin(dage2), l2*cos(dage1)*cos(dage2)},
+    {(cos(dage2)*cos(dage3)*sin(dage1) - sin(dage1)*sin(dage2)*sin(dage3))*(l3 + 1) + l2*cos(dage2)*sin(dage1), l1 + (cos(dage2)*sin(dage3) + cos(dage3)*sin(dage2))*(l3 + 1) + l2*sin(dage2), (l3 + 1)*(cos(dage1)*cos(dage2)*cos(dage3) - cos(dage1)*sin(dage2)*sin(dage3)) + l2*cos(dage1)*cos(dage2)}
 };
 
 int ArmEdge[][2] = {
@@ -51,6 +51,8 @@ void display(void)
     glColor3d(1.0, 0.0, 0.0);
     glVertex3dv(CoordinateVertex[CoordinateEdge[2][0]]);
     glVertex3dv(CoordinateVertex[CoordinateEdge[2][1]]);
+
+    cout << sin(30) << endl;
 
     glColor3d(1.0, 1.0, 1.0);
     for(int i=0; i<3; ++i){
