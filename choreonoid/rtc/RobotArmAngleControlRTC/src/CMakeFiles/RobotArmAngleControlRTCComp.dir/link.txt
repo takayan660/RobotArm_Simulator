@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/RobotArmAngleControlRTCComp.dir/RobotArmAngleControlRTCComp.cpp.o CMakeFiles/RobotArmAngleControlRTCComp.dir/RobotArmAngleControlRTC.cpp.o  -o RobotArmAngleControlRTCComp -rdynamic -lpthread -lomniORB4 -lomnithread -lomniDynamic4 -lRTC -lcoil 
