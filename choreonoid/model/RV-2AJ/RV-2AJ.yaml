@@ -1,0 +1,26 @@
+
+modelFile: RV-2AJ.wrl
+
+standardPose: [ 45, 30, 0, 60, 0, 45, 0, 0, 0 ]
+
+linkGroup:
+  - BASE
+  - name: Arm
+    links: [ J1, J2, J4, J6, J7 ]
+
+possibleIkInterpolationLinks: [ J6, J7 ]
+defaultIkInterpolationLinks: [ J7 ]
+possileSupportLinks: [ ]
+
+defaultIKsetup:
+  J6: [ BASE ]
+  J7: [ BASE ]
+
+selfCollisionDetection:
+  excludeTreeDepth: 2
+  excludeLinks: [ ]
+
+bodyMarkers:
+  - [ BASE, [ 0.2, 0.2, 0.0 ], [ 0.2, -0.2, 0.0 ], [ -0.2, -0.2, 0.0 ], [ -0.2, 0.2, 0.0 ] ]
+  - J4
+  - J7
