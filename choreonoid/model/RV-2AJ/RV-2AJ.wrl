@@ -173,9 +173,13 @@ DEF RV-2AJ Humanoid {
      rotation 0 0 1 0
      children [
        DEF BASE_LINK Segment {
-	 mass 3.04
-	 centerOfMass 0 0 0.075
-	 momentsOfInertia [1 0 0 0 1 0 0 0 1]
+	 mass 6.801
+	 centerOfMass 0.45 0.764 -0.263
+	 momentsOfInertia [
+          1 0 0
+          0 1 0
+          0 0 1
+     ]
 	 children [
 	   Inline {
 	     url "parts/BASE.wrl"
@@ -186,18 +190,22 @@ DEF RV-2AJ Humanoid {
 	 jointType "rotate"
 	 jointAxis 0 0 1
 	 jointId 0
-	 translation 0 0 0.2
+	 translation 0 0 0.165
 	 rotation 0 0 1 0
-	 ulimit 3.08923278
-	 llimit -3.08923278
+	 ulimit 2.61799387
+	 llimit -2.61799387
 	 uvlimit 3.141592653589793
 	 lvlimit -3.141592653589793
 	 rotorInertia 3.0E-4
 	 children [
 	   DEF J1_LINK Segment {
-	     mass 9.78
-	     centerOfMass 0 0 0.14818
-	     momentsOfInertia [1 0 0 0 1 0 0 0 1]
+	     mass 2.941
+	     centerOfMass 0.526 0.764 -0.091
+	     momentsOfInertia [
+              1.182E2   4.331E-2   2.433 
+              4.331E-2  1.241E2  -1.930E-2 
+              2.433    -1.930E-2  6.619E1
+         ]
 	     children [
 	       Inline {
 		 url "parts/J1.wrl"
@@ -206,98 +214,114 @@ DEF RV-2AJ Humanoid {
 	   }
 	   DEF J2 Joint {
 	     jointType "rotate"
-	     jointAxis 1 0 0
+	     jointAxis 0 1 0
 	     jointId 1
-	     translation 0 0 0.115
+	     translation 0 0 0.135
 	     rotation 0 0 1 0
-	     ulimit 1.6406095
-	     llimit -1.6406095
-	     uvlimit 3.141592653589793
-	     lvlimit -3.141592653589793
+	     ulimit 2.09439510
+	     llimit -1.04719755
+	     uvlimit 1.570796327
+	     lvlimit -1.570796327
 	     rotorInertia 3.0E-04
 	     children [
 	       DEF J2_LINK Segment {
-		 mass 8.41
-		 centerOfMass 0 0 0.37675
-		 momentsOfInertia [1 0 0 0 1 0 0 0 1]
+		 mass 4.714
+		 centerOfMass 0.561 0.764 0.067
+		 momentsOfInertia [
+               4.684E2  -6.732E-1 -1.072E2
+              -6.732E-1  3.816E2   7.957E-1
+              -1.072E2   7.957E-1  2.423E2
+         ]
 		 children [
 		   Inline {
 		     url "parts/J2.wrl"
 		   }
 		 ]
 	       }
-		   DEF J4 Joint {
+		   DEF J3 Joint {
 		     jointType "rotate"
-		     jointAxis 1 0 0
-		     jointId 3
-		     translation 0 0 0.17
+		     jointAxis 0 1 0
+		     jointId 2
+		     translation 0 0 0.25
 		     rotation 0 0 1 0
-		     ulimit 2.39110108
-		     llimit -2.39110108
-		     uvlimit 3.141592653589793
-		     lvlimit -3.141592653589793
+		     ulimit 2.09439510
+		     llimit -1.91986217
+		     uvlimit 2.35619449
+		     lvlimit -2.35619449
 		     rotorInertia 8.5E-5
 		     children [
-		       DEF J4_LINK Segment {
-			 mass 4.31
-			 centerOfMass 0 0 0.809590
-			 momentsOfInertia [1 0 0 0 1 0 0 0 1]
+		       DEF J3_LINK Segment {
+			 mass 2.173
+			 centerOfMass 0.67 0.763 0.158
+			 momentsOfInertia [
+                  5.84E1    2.029E-1  3.05E1
+                  2.029E-1  1.026E2  -1.664E-1 
+                  3.05E1   -1.664E-1  8.892E1
+             ]
 			 children [
 			   Inline {
-			     url "parts/J4.wrl"
+			     url "parts/J3.wrl"
 			   }
 			 ]
 		       }
-			   DEF J6 Joint {
+			   DEF J4 Joint {
 			     jointType "rotate"
-			     jointAxis 1 0 0
-			     jointId 5
-			     translation -0.0025 0 0.25
+			     jointAxis 0 1 0
+			     jointId 3
+			     translation 0 0 0.16
 			     rotation 0 0 1 0
-			     ulimit 2.87979327
-			     llimit -2.87979327
+			     ulimit 1.57079632
+			     llimit -1.57079632
 			     uvlimit 3.141592653589793
 			     lvlimit -3.141592653589793
 			     rotorInertia 2.3E-6
 			     children [
-			       DEF J6_LINK Segment {
-				 mass 1.46
-				 centerOfMass 0 0 1.2335
-				 momentsOfInertia [1 0 0 0 1 0 0 0 1]
+			       DEF J4_LINK Segment {
+				 mass 0.416
+				 centerOfMass 0.744 0.762 0.144
+				 momentsOfInertia [
+                      3.023     1.745E-2  4.3E-1
+                      1.745E-2  5.308    -3.281E-3 
+                      4.3E-1   -3.281E-3  3.651
+                 ]
 				 children [
 				   Inline {
-				     url "parts/J6.wrl"
+				     url "parts/J4.wrl"
 				   }
 				 ]
 			       }
-			       DEF J7 Joint {
+			       DEF J5 Joint {
 				 jointType "rotate"
 				 jointAxis 0 0 1
-				 jointId 6
-				 translation 0 0 0.08
+				 jointId 4
+				 translation 0 0 0.046
 				 rotation 0 0 1 0
-				 ulimit 4.45058959
-				 llimit -4.45058959
-				 uvlimit 3.141592653589793
-				 lvlimit -3.141592653589793
+				 ulimit 3.49065850
+				 llimit -3.49065850
+				 uvlimit 3.665191429
+				 lvlimit -3.665191429
 				 rotorInertia 2.3E-6
 				 children [
-				   DEF J7_LINK Segment {
-				     mass 0.24
-				     centerOfMass 0 0 1.3145
-				     momentsOfInertia [1 0 0 0 1 0 0 0 1]
+				   DEF J5_LINK Segment {
+				     mass 0.132
+				     centerOfMass 0.799 0.762 0.086
+				     momentsOfInertia [
+                          9.239E-1 -2.846E-3 -1.844E-1
+                         -2.846E-3  5.595E-1  1.376E-3
+                         -1.844E-1  1.376E-3  6.535E-1
+                     ]
 				     children [
 				       Inline {
-					 url "parts/J7.wrl"
+					 url "parts/J5.wrl"
 				       }
 				     ]
 				   }
 				 ]
-			       } # end of joint J7
+			       } # end of joint J5
 			     ]
-			   } # end of joint J6
+			   } # end of joint J4
 			 ]
-		   } # end of joint J4
+		   } # end of joint J3
 		 ]
 	   } # end of joint J2
 	 ]
@@ -309,16 +333,16 @@ DEF RV-2AJ Humanoid {
    USE BASE,
    USE J1,
    USE J2,
+   USE J3,
    USE J4,
-   USE J6,
-   USE J7,
+   USE J5,
   ]
   segments [
    USE BASE_LINK,
    USE J1_LINK,
    USE J2_LINK,
+   USE J3_LINK,
    USE J4_LINK,
-   USE J6_LINK,
-   USE J7_LINK,
+   USE J5_LINK,
   ]
 }
