@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <rtc:RtcProfile rtc:version="0.2" rtc:id="RTC:Takaharu Nakajima:Generic:RobotArmAngleControlRTC:1.0.0" xmlns:rtcExt="http://www.openrtp.org/namespaces/rtc_ext" xmlns:rtcDoc="http://www.openrtp.org/namespaces/rtc_doc" xmlns:rtc="http://www.openrtp.org/namespaces/rtc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <rtc:BasicInfo xsi:type="rtcExt:basic_info_ext" rtcExt:saveProject="RobotArmAngleControlRTC" rtc:updateDate="2016-11-02T17:28:51+09:00" rtc:creationDate="2016-11-02T17:28:51+09:00" rtc:version="1.0.0" rtc:vendor="Takaharu Nakajima" rtc:maxInstances="1" rtc:executionType="PeriodicExecutionContext" rtc:executionRate="1000.0" rtc:description="RobotArmAngleControlRTC" rtc:category="Generic" rtc:componentKind="DataFlowComponent" rtc:activityType="PERIODIC" rtc:componentType="STATIC" rtc:name="RobotArmAngleControlRTC"/>
+    <rtc:BasicInfo xsi:type="rtcExt:basic_info_ext" rtcExt:saveProject="RobotArmAngleControlRTC" rtc:updateDate="2016-11-02T17:28:51+09:00" rtc:creationDate="2016-11-02T17:28:51+09:00" rtc:version="1.0.0" rtc:vendor="Takaharu Nakajima" rtc:maxInstances="1" rtc:executionType="PeriodicExecutionContext" rtc:executionRate="1000.0" rtc:description="RobotArmAngleControlRTC" rtc:category="Generic" rtc:componentKind="DataFlowComponent" rtc:activityType="PERIODIC" rtc:componentType="STATIC" rtc:name="RobotArmAngleControlRTC">
+        <rtcExt:VersionUpLogs></rtcExt:VersionUpLogs>
+    </rtc:BasicInfo>
     <rtc:Actions>
         <rtc:OnInitialize xsi:type="rtcDoc:action_status_doc" rtc:implemented="true"/>
         <rtc:OnFinalize xsi:type="rtcDoc:action_status_doc" rtc:implemented="false"/>
@@ -17,5 +19,7 @@
         <rtc:OnAction xsi:type="rtcDoc:action_status_doc" rtc:implemented="false"/>
         <rtc:OnModeChanged xsi:type="rtcDoc:action_status_doc" rtc:implemented="false"/>
     </rtc:Actions>
+    <rtc:DataPorts xsi:type="rtcExt:dataport_ext" rtcExt:position="LEFT" rtcExt:variableName="angle" rtc:unit="" rtc:subscriptionType="" rtc:dataflowType="" rtc:interfaceType="" rtc:idlFile="" rtc:type="RTC::TimedDoubleSeq" rtc:name="q" rtc:portType="DataInPort"/>
+    <rtc:DataPorts xsi:type="rtcExt:dataport_ext" rtcExt:position="RIGHT" rtcExt:variableName="torque" rtc:unit="" rtc:subscriptionType="" rtc:dataflowType="" rtc:interfaceType="" rtc:idlFile="" rtc:type="RTC::TimedDoubleSeq" rtc:name="u" rtc:portType="DataOutPort"/>
     <rtc:Language xsi:type="rtcExt:language_ext" rtc:kind="C++"/>
 </rtc:RtcProfile>

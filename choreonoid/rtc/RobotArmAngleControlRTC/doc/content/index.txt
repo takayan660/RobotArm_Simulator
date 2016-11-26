@@ -116,6 +116,8 @@ The ports provided by the component are described below:
 =============== =========== ============================== =======
 Name            Type        Data type                      Purpose
 =============== =========== ============================== =======
+q               InPort      RTC::TimedDoubleSeq            
+u               OutPort     RTC::TimedDoubleSeq            
 =============== =========== ============================== =======
 
 Examples

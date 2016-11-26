@@ -46,10 +46,10 @@ items:
               data: 
                 isImmediateMode: true
                 controllerOptions: ""
-                moduleName: ""
+                moduleName: "${PROGRAM_TOP}/lib/choreonoid-1.6/rtc/RobotArmAngleControlRTC.so"
                 confFileName: ""
                 configurationMode: "Create Default Port"
-                AutoConnect: false
+                AutoConnect: true
                 InstanceName: "RV-2AJ"
                 bodyPeriodicRate: 0
                 RelativePathBase: "RTC directory"
@@ -117,7 +117,7 @@ views:
     class: ItemTreeView
     mounted: true
     state: 
-      selected: [ 2 ]
+      selected: [ 3 ]
       checked: [ 2, 4 ]
       expanded: [ 1, 2, 4 ]
   - 
@@ -310,12 +310,12 @@ viewAreas:
     contents: 
       type: splitter
       orientation: horizontal
-      sizes: [ 206, 1003 ]
+      sizes: [ 315, 1534 ]
       children: 
         - 
           type: splitter
           orientation: vertical
-          sizes: [ 451, 451 ]
+          sizes: [ 479, 479 ]
           children: 
             - 
               type: pane
@@ -328,12 +328,12 @@ viewAreas:
         - 
           type: splitter
           orientation: vertical
-          sizes: [ 644, 258 ]
+          sizes: [ 684, 274 ]
           children: 
             - 
               type: splitter
               orientation: horizontal
-              sizes: [ 433, 564 ]
+              sizes: [ 664, 864 ]
               children: 
                 - 
                   type: pane

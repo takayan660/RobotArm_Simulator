@@ -261,3 +261,83 @@ Parsed CXX implicit link information from above output:
   implicit fwks: []
 
 
+Performing C++ SOURCE FILE Test COMPILER_SUPPORTS_CXX11 succeded with the following output:
+Change Dir: /home/taka/projects/RobotArm_Simulator/choreonoid/rtc/RobotArmAngleControlRTC/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1595944489/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1595944489.dir/build.make CMakeFiles/cmTryCompileExec1595944489.dir/build
+make[1]: Entering directory `/home/taka/projects/RobotArm_Simulator/choreonoid/rtc/RobotArmAngleControlRTC/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/taka/projects/RobotArm_Simulator/choreonoid/rtc/RobotArmAngleControlRTC/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1595944489.dir/src.cxx.o
+/usr/bin/c++    -DCOMPILER_SUPPORTS_CXX11   -std=c++11 -o CMakeFiles/cmTryCompileExec1595944489.dir/src.cxx.o -c /home/taka/projects/RobotArm_Simulator/choreonoid/rtc/RobotArmAngleControlRTC/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec1595944489
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1595944489.dir/link.txt --verbose=1
+/usr/bin/c++    -DCOMPILER_SUPPORTS_CXX11    CMakeFiles/cmTryCompileExec1595944489.dir/src.cxx.o  -o cmTryCompileExec1595944489 -rdynamic 
+make[1]: Leaving directory `/home/taka/projects/RobotArm_Simulator/choreonoid/rtc/RobotArmAngleControlRTC/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test COMPILER_SUPPORTS_CXX0X succeded with the following output:
+Change Dir: /home/taka/projects/RobotArm_Simulator/choreonoid/rtc/RobotArmAngleControlRTC/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1715588808/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1715588808.dir/build.make CMakeFiles/cmTryCompileExec1715588808.dir/build
+make[1]: Entering directory `/home/taka/projects/RobotArm_Simulator/choreonoid/rtc/RobotArmAngleControlRTC/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/taka/projects/RobotArm_Simulator/choreonoid/rtc/RobotArmAngleControlRTC/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1715588808.dir/src.cxx.o
+/usr/bin/c++    -DCOMPILER_SUPPORTS_CXX0X   -std=c++0x -o CMakeFiles/cmTryCompileExec1715588808.dir/src.cxx.o -c /home/taka/projects/RobotArm_Simulator/choreonoid/rtc/RobotArmAngleControlRTC/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec1715588808
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1715588808.dir/link.txt --verbose=1
+/usr/bin/c++    -DCOMPILER_SUPPORTS_CXX0X    CMakeFiles/cmTryCompileExec1715588808.dir/src.cxx.o  -o cmTryCompileExec1715588808 -rdynamic 
+make[1]: Leaving directory `/home/taka/projects/RobotArm_Simulator/choreonoid/rtc/RobotArmAngleControlRTC/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test COMPILER_SUPPORTS_CXX11 succeded with the following output:
+Change Dir: /home/taka/projects/RobotArm_Simulator/choreonoid/rtc/RobotArmAngleControlRTC/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3318616029/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3318616029.dir/build.make CMakeFiles/cmTryCompileExec3318616029.dir/build
+make[1]: Entering directory `/home/taka/projects/RobotArm_Simulator/choreonoid/rtc/RobotArmAngleControlRTC/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/taka/projects/RobotArm_Simulator/choreonoid/rtc/RobotArmAngleControlRTC/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec3318616029.dir/src.cxx.o
+/usr/bin/c++    -DCOMPILER_SUPPORTS_CXX11   -std=c++11 -o CMakeFiles/cmTryCompileExec3318616029.dir/src.cxx.o -c /home/taka/projects/RobotArm_Simulator/choreonoid/rtc/RobotArmAngleControlRTC/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec3318616029
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3318616029.dir/link.txt --verbose=1
+/usr/bin/c++    -DCOMPILER_SUPPORTS_CXX11    CMakeFiles/cmTryCompileExec3318616029.dir/src.cxx.o  -o cmTryCompileExec3318616029 -rdynamic 
+make[1]: Leaving directory `/home/taka/projects/RobotArm_Simulator/choreonoid/rtc/RobotArmAngleControlRTC/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test COMPILER_SUPPORTS_CXX11 succeded with the following output:
+Change Dir: /home/taka/projects/RobotArm_Simulator/choreonoid/rtc/RobotArmAngleControlRTC/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2712607265/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2712607265.dir/build.make CMakeFiles/cmTryCompileExec2712607265.dir/build
+make[1]: Entering directory `/home/taka/projects/RobotArm_Simulator/choreonoid/rtc/RobotArmAngleControlRTC/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/taka/projects/RobotArm_Simulator/choreonoid/rtc/RobotArmAngleControlRTC/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec2712607265.dir/src.cxx.o
+/usr/bin/c++    -DCOMPILER_SUPPORTS_CXX11   -std=c++11 -o CMakeFiles/cmTryCompileExec2712607265.dir/src.cxx.o -c /home/taka/projects/RobotArm_Simulator/choreonoid/rtc/RobotArmAngleControlRTC/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec2712607265
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2712607265.dir/link.txt --verbose=1
+/usr/bin/c++    -DCOMPILER_SUPPORTS_CXX11    CMakeFiles/cmTryCompileExec2712607265.dir/src.cxx.o  -o cmTryCompileExec2712607265 -rdynamic 
+make[1]: Leaving directory `/home/taka/projects/RobotArm_Simulator/choreonoid/rtc/RobotArmAngleControlRTC/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test COMPILER_SUPPORTS_CXX11 succeded with the following output:
+Change Dir: /home/taka/projects/RobotArm_Simulator/choreonoid/rtc/RobotArmAngleControlRTC/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3611559690/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3611559690.dir/build.make CMakeFiles/cmTryCompileExec3611559690.dir/build
+make[1]: Entering directory `/home/taka/projects/RobotArm_Simulator/choreonoid/rtc/RobotArmAngleControlRTC/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/taka/projects/RobotArm_Simulator/choreonoid/rtc/RobotArmAngleControlRTC/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec3611559690.dir/src.cxx.o
+/usr/bin/c++    -DCOMPILER_SUPPORTS_CXX11   -std=c++11 -o CMakeFiles/cmTryCompileExec3611559690.dir/src.cxx.o -c /home/taka/projects/RobotArm_Simulator/choreonoid/rtc/RobotArmAngleControlRTC/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec3611559690
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3611559690.dir/link.txt --verbose=1
+/usr/bin/c++    -DCOMPILER_SUPPORTS_CXX11    CMakeFiles/cmTryCompileExec3611559690.dir/src.cxx.o  -o cmTryCompileExec3611559690 -rdynamic 
+make[1]: Leaving directory `/home/taka/projects/RobotArm_Simulator/choreonoid/rtc/RobotArmAngleControlRTC/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0;}

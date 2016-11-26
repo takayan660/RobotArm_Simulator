@@ -10,6 +10,7 @@
 #   --module-desc='RobotArmAngleControlRTC' --module-version=1.0.0 --module-vendor=Takaharu Nakajima 
 #   --module-category=Generic --module-comp-type=STATIC 
 #   --module-act-type=PERIODIC --module-max-inst=1 
+#   --inport=q:RTC::TimedDoubleSeq --outport=u:RTC::TimedDoubleSeq 
 
 
 ======================================================================
@@ -64,6 +65,24 @@ Lang Type:
 ======================================================================
 # <rtc-template block="inport">
 
+	Name:        q
+	PortNumber:  0
+	Description: 
+	PortType: 
+	DataType:    RTC::TimedDoubleSeq
+	MaxOut: 
+	[Data Elements]
+		Name:
+		Type:            
+		Number:          
+		Semantics:       
+		Unit:            
+		Frequency:       
+		Operation Cycle: 
+		RangeLow:
+		RangeHigh:
+		DefaultValue:
+
 
 # </rtc-template>
 
@@ -71,6 +90,24 @@ Lang Type:
     OutPorts definition
 ======================================================================
 # <rtc-template block="outport">
+
+	Name:        u
+	PortNumber:  0
+	Description: 
+	PortType: 
+	DataType:    RTC::TimedDoubleSeq
+	MaxOut: 
+	[Data Elements]
+		Name:
+		Type:            
+		Number:          
+		Semantics:       
+		Unit:            
+		Frequency:       
+		Operation Cycle: 
+		RangeLow:
+		RangeHigh:
+		DefaultValue:
 
 
 # </rtc-template>

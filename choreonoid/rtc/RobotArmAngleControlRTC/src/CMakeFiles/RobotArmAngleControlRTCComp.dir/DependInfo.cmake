@@ -22,6 +22,12 @@ SET(CMAKE_C_TARGET_INCLUDE_PATH
   "/usr/include/coil-1.1"
   "/usr/include/openrtm-1.1"
   "/usr/include/openrtm-1.1/rtm/idl"
+  "/usr/local/include/choreonoid-1.6"
+  "/usr/include/qt4"
+  "/usr/include/qt4/QtCore"
+  "/usr/include/qt4/QtGui"
+  "/usr/include/qt4/QtOpenGL"
+  "/usr/include/eigen3"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
 SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

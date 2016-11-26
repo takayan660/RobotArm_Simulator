@@ -8,7 +8,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 # Import target "RobotArmAngleControlRTC" for configuration ""
 set_property(TARGET RobotArmAngleControlRTC APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
 set_target_properties(RobotArmAngleControlRTC PROPERTIES
-  IMPORTED_LINK_INTERFACE_LIBRARIES_NOCONFIG "pthread;omniORB4;omnithread;omniDynamic4;RTC;coil"
+  IMPORTED_LINK_INTERFACE_LIBRARIES_NOCONFIG "pthread;omniORB4;omnithread;omniDynamic4;RTC;coil;CnoidBody;CnoidBodyPlugin;CnoidUtil;CnoidBase;QtOpenGL;QtGui;QtCore;boost_system;boost_filesystem"
   IMPORTED_LOCATION_NOCONFIG "${_IMPORT_PREFIX}/components/lib/RobotArmAngleControlRTC.so"
   IMPORTED_SONAME_NOCONFIG "RobotArmAngleControlRTC.so"
   )

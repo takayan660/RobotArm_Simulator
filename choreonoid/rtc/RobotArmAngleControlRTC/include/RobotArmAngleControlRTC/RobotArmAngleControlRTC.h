@@ -13,6 +13,8 @@
 #include <rtm/idl/BasicDataTypeSkel.h>
 #include <rtm/idl/ExtendedDataTypesSkel.h>
 #include <rtm/idl/InterfaceDataTypesSkel.h>
+#include <cnoid/MultiValueSeq>
+#include <vector>
 
 // Service implementation headers
 // <rtc-template block="service_impl_h">
@@ -233,12 +235,20 @@ class RobotArmAngleControlRTC
 
   // DataInPort declaration
   // <rtc-template block="inport_declare">
+  RTC::TimedDoubleSeq m_angle;
+  /*!
+   */
+  InPort<RTC::TimedDoubleSeq> m_angleIn;
   
   // </rtc-template>
 
 
   // DataOutPort declaration
   // <rtc-template block="outport_declare">
+  RTC::TimedDoubleSeq m_torque;
+  /*!
+   */
+  OutPort<RTC::TimedDoubleSeq> m_torqueOut;
   
   // </rtc-template>
 
@@ -258,6 +268,11 @@ class RobotArmAngleControlRTC
   // </rtc-template>
 
  private:
+  cnoid::MultiValueSeqPtr qseq;
+  std::vector<double> q0;
+  cnoid::MultiValueSeq::Frame oldFrame;
+  int currentFrame;
+  double timeStep_;
   // <rtc-template block="private_attribute">
   
   // </rtc-template>

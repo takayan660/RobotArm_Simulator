@@ -108,6 +108,8 @@ RobotArmAngleControlRTCは ``RobotArmAngleControlRTCComp`` を実行（ ``${pref
 =============== =========== ============================== ====
 ポート名        ポート型    データ型                       意味
 =============== =========== ============================== ====
+q               InPort      RTC::TimedDoubleSeq            
+u               OutPort     RTC::TimedDoubleSeq            
 =============== =========== ============================== ====
 
 例

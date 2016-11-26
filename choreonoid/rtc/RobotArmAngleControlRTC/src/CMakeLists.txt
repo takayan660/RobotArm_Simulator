@@ -36,6 +36,11 @@ MAP_ADD_STR(comp_hdrs "../" comp_headers)
 link_directories(${OPENRTM_LIBRARY_DIRS})
 link_directories(${OMNIORB_LIBRARY_DIRS})
 
+include(FindPkgConfig)
+pkg_check_modules(CNOID choreonoid-body-plugin)
+include_directories(${CNOID_INCLUDE_DIRS})
+link_directories(${CNOID_LIBRARY_DIRS})
+
 add_library(${PROJECT_NAME} ${LIB_TYPE} ${comp_srcs}
   ${comp_headers} ${ALL_IDL_SRCS})
 set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "")
@@ -44,11 +49,11 @@ if(NOT TARGET ALL_IDL_TGT)
   add_custom_target(ALL_IDL_TGT)
 endif(NOT TARGET ALL_IDL_TGT)
 add_dependencies(${PROJECT_NAME} ALL_IDL_TGT)
-target_link_libraries(${PROJECT_NAME} ${OPENRTM_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} ${OPENRTM_LIBRARIES} ${CNOID_LIBRARIES} boost_system boost_filesystem)
 
 add_executable(${PROJECT_NAME}Comp ${standalone_srcs}
   ${comp_srcs} ${comp_headers} ${ALL_IDL_SRCS})
-target_link_libraries(${PROJECT_NAME}Comp ${OPENRTM_LIBRARIES})
+target_link_libraries(${PROJECT_NAME}Comp ${OPENRTM_LIBRARIES} ${CNOID_LIBRARIES} boost_system boost_filesystem)
 
 install(TARGETS ${PROJECT_NAME} ${PROJECT_NAME}Comp
     EXPORT ${PROJECT_NAME}
@@ -58,3 +63,11 @@ install(TARGETS ${PROJECT_NAME} ${PROJECT_NAME}Comp
 install(EXPORT ${PROJECT_NAME}
     DESTINATION ${LIB_INSTALL_DIR}/${PROJECT_NAME}
     FILE ${PROJECT_NAME}Depends.cmake)
+
+include(CheckCXXCompilerFlag)
+CHECK_CXX_COMPILER_FLAG("-std=c++11" COMPILER_SUPPORTS_CXX11)
+if(COMPILER_SUPPORTS_CXX11)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+else()
+    message(STATUS "The compiler ${CMAKE_CXX_COMPILER} has no C++11 support. Please use a different C++ compiler.")
+endif()

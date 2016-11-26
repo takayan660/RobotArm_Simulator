@@ -90,7 +90,6 @@ if(BUILD_SOURCES)
     add_subdirectory(include)
     add_subdirectory(src)
 endif(BUILD_SOURCES)
-
 # Package creation
 # By default, do not warn when built on machines using only VS Express:
 IF(NOT DEFINED CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS_NO_WARNINGS)
@@ -108,5 +107,15 @@ configure_file("${PROJECT_SOURCE_DIR}/cmake/cpack_options.cmake.in"
 set(CPACK_PROJECT_CONFIG_FILE ${cpack_options})
 include(${CPACK_PROJECT_CONFIG_FILE})
 include(CPack)
+include(FindPkgConfig)
+pkg_check_modules(CNOID choreonoid-body-plugin)
+include_directories(${CNOID_INCLUDE_DIRS})
+link_directories(${CNOID_LIBRARY_DIRS})
 
-
+include(CheckCXXCompilerFlag)
+CHECK_CXX_COMPILER_FLAG("-std=c++11" COMPILER_SUPPORTS_CXX11)
+if(COMPILER_SUPPORTS_CXX11)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+else()
+    message(STATUS "The compiler ${CMAKE_CXX_COMPILER} has no C++11 support. Please use a different C++ compiler.")
+endif()
