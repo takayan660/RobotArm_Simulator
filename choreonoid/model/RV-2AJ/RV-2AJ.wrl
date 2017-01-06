@@ -220,8 +220,6 @@ DEF RV-2AJ Humanoid {
 	     rotation 0 0 1 0
 	     ulimit 2.09439510
 	     llimit -1.04719755
-	     uvlimit 1.570796327
-	     lvlimit -1.570796327
 	     rotorInertia 3.0E-04
 	     children [
 	       DEF J2_LINK Segment {
@@ -246,8 +244,6 @@ DEF RV-2AJ Humanoid {
 		     rotation 0 0 1 0
 		     ulimit 2.09439510
 		     llimit -1.91986217
-		     uvlimit 2.35619449
-		     lvlimit -2.35619449
 		     rotorInertia 8.5E-5
 		     children [
 		       DEF J3_LINK Segment {
@@ -272,8 +268,6 @@ DEF RV-2AJ Humanoid {
 			     rotation 0 0 1 0
 			     ulimit 1.57079632
 			     llimit -1.57079632
-			     uvlimit 3.141592653589793
-			     lvlimit -3.141592653589793
 			     rotorInertia 2.3E-6
 			     children [
 			       DEF J4_LINK Segment {
@@ -298,8 +292,6 @@ DEF RV-2AJ Humanoid {
 				 rotation 0 0 1 0
 				 ulimit 3.49065850
 				 llimit -3.49065850
-				 uvlimit 3.665191429
-				 lvlimit -3.665191429
 				 rotorInertia 2.3E-6
 				 children [
 				   DEF J5_LINK Segment {
