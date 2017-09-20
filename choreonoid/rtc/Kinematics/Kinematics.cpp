@@ -29,6 +29,7 @@ double rad2deg(double radian)
     return degree;
 }
 
+/*
 double ForwardKinematics(double angle)
 {
     return position;
@@ -43,6 +44,7 @@ double CalcJacobian(double angle)
 {
     return Jacobian;
 }
+*/
 
 // Module specification
 // <rtc-template block="module_spec">

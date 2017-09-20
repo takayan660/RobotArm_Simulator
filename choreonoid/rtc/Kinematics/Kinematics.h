@@ -274,7 +274,7 @@ class Kinematics
   // </rtc-template>
 
  private:
-    Matrix<double,4,4> RTa, aTb, bTc, cTd, dTe, eTf, fTE, RTE;
+    //Matrix<double,4,4> RTa, aTb, bTc, cTd, dTe, eTf, fTE, RTE;
 };
 
 
