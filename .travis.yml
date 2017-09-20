@@ -4,20 +4,23 @@ sudo: required
 
 install: true
 
-before_install:
-    - sudo add-apt-repository ppa:hrg/daily -y
-    - sudo apt-get update -q
-    - sudo apt-get install choreonoid libcnoid-dev openrtm-aist openrtm-aist-dev doxygen hrpsys-base libav-tools -y
-
 addons:
     apt:
         sources:
-            - george-edison55-precise-backports
+            - hrg/daily
         packages:
             - libboost-all-dev
             - libeigen3-dev
             - cmake-data
             - cmake
+            - choreonoid
+            - libcnoid-dev
+            - openrtm-aist 
+            - openrtm-ai      
+            - st-dev 
+            - doxygen
+            - hrpsys-base 
+            - libav-tools
 
 before_script:
     - EIGEN3_INCLUDE_DIR="/usr/include/eigen3"
