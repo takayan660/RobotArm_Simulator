@@ -5,9 +5,9 @@ sudo: required
 install: true
 
 before_install:
-    sudo add-apt-repository ppa:hrg/daily -y
-    sudo apt-get update -q
-    sudo apt-get install choreonoid libcnoid-dev openrtm-aist openrtm-aist-dev doxygen hrpsys-base libav-tools cmake -y
+    - sudo add-apt-repository ppa:hrg/daily -y
+    - sudo apt-get update -q
+    - sudo apt-get install choreonoid libcnoid-dev openrtm-aist openrtm-aist-dev doxygen hrpsys-base libav-tools cmake -y
 
 addons:
     apt:
@@ -16,7 +16,7 @@ addons:
             libeigen3-dev
 
 script:
-    EIGEN3_INCLUDE_DIR="/usr/include/eigen3"
-    cd src/ && make
-    cd RobotArm_Simulator/choreonoid/rtc/Kinematics && cmake . && sudo make install
-    cd RobotArm_Simulator/choreonoid/rtc/PDController && cmake . && sudo make install
+    - EIGEN3_INCLUDE_DIR="/usr/include/eigen3"
+    - cd src/ && make
+    - cd RobotArm_Simulator/choreonoid/rtc/Kinematics && cmake . && sudo make install
+    - cd RobotArm_Simulator/choreonoid/rtc/PDController && cmake . && sudo make install
