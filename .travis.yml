@@ -21,5 +21,4 @@ before_script:
 
 script:
     - cd src/ && make && cd ../
-    - cd choreonoid/rtc/Kinematics && cmake . && sudo make install && cd ../../../
     - cd choreonoid/rtc/PDController && cmake . && sudo make install && cd ../../../

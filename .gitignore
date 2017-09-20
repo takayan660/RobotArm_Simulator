@@ -2,3 +2,9 @@
 *#
 *.swp
 *.out
+
+CMakeCache.txt
+CMakeFiles
+cmake_install.cmake
+*.so
+choreonoid/rtc/*/Makefile

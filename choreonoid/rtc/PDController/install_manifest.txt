@@ -1,2 +1,0 @@
-/usr/lib/choreonoid-1.6/rtc/PDController.so
-/usr/lib/choreonoid-1.6/rtc/pdgain.txt
