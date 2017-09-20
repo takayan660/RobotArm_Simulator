@@ -18,5 +18,5 @@ addons:
 script:
     - EIGEN3_INCLUDE_DIR="/usr/include/eigen3"
     - cd src/ && make
-    - cd RobotArm_Simulator/choreonoid/rtc/Kinematics && cmake . && sudo make install
-    - cd RobotArm_Simulator/choreonoid/rtc/PDController && cmake . && sudo make install
+    - cd choreonoid/rtc/Kinematics && cmake . && sudo make install
+    - cd choreonoid/rtc/PDController && cmake . && sudo make install
