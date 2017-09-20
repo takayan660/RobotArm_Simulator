@@ -17,6 +17,6 @@ addons:
 
 script:
     - EIGEN3_INCLUDE_DIR="/usr/include/eigen3"
-    - cd src/ && make
-    - cd choreonoid/rtc/Kinematics && cmake . && sudo make install
-    - cd choreonoid/rtc/PDController && cmake . && sudo make install
+    - cd src/ && make && cd ../
+    - cd choreonoid/rtc/Kinematics && cmake . && sudo make install && cd .././../
+    - cd choreonoid/rtc/PDController && cmake . && sudo make install && cd ../../../
