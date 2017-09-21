@@ -3,5 +3,5 @@
 
 生体工学で使用
 
-主にOpenGLを使用<br>
-後にchoreonoidのシミュレーションを追加
+PDControllerをRV-2AJに使用した例:
+https://youtu.be/VN0BNBUQcGM
