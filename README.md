@@ -5,3 +5,4 @@
 
 PDControllerをRV-2AJに使用した例:
 https://youtu.be/VN0BNBUQcGM
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/VN0BNBUQcGM/0.jpg)](http://www.youtube.com/watch?v=VN0BNBUQcGM)
