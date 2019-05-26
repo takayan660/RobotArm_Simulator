@@ -46,7 +46,7 @@ items:
               data: 
                 isImmediateMode: true
                 controllerOptions: ""
-                moduleName: "/usr/lib/choreonoid-1.6/rtc/PDController.so"
+                moduleName: "/usr/loca/lib/choreonoid-1.7/rtc/PDController.so"
                 confFileName: ""
                 configurationMode: "Create Default Port"
                 AutoConnect: true
@@ -59,7 +59,7 @@ items:
           plugin: Body
           class: BodyItem
           data: 
-            modelFile: "${SHARE}/model/misc/floor.wrl"
+            modelFile: "${SHARE}/model/house/floor.wrl"
             currentBaseLink: "BASE"
             rootPosition: [ 0, 0, -0.1 ]
             rootAttitude: [ 

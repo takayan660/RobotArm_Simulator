@@ -32,8 +32,8 @@ target_link_libraries(PDController
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
 
-install(TARGETS PDController LIBRARY DESTINATION /usr/lib/choreonoid-1.6/rtc)
-install(FILES pdgain.txt DESTINATION /usr/lib/choreonoid-1.6/rtc)
+install(TARGETS PDController LIBRARY DESTINATION /usr/local/lib/choreonoid-1.7/rtc)
+install(FILES pdgain.txt DESTINATION /usr/local/lib/choreonoid-1.7/rtc)
 
 include(CheckCXXCompilerFlag)
 CHECK_CXX_COMPILER_FLAG("-std=c++11" COMPILER_SUPPORTS_CXX11)
